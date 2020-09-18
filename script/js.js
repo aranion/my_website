@@ -1,40 +1,40 @@
-const portfolio = ` <p>Личный cайт студента GeekBrains</p>
-                    <a href="http://v90630om.beget.tech/index.php" target="_blank">
-                    <img src="./img/my_website1.jpg" alt="сайт первый">
-                    </a>`;
-const certificate = `   <p>Сертификаты:</p>
-                        <h5>Основы программирования. Интерактивный курс</h5>
-                        <a href="https://geekbrains.ru/certificates/954339" target="_blank">
-                        <img src="./img/cert1.jpg" alt="сертификат 1">
-                        </a>
-                        <h5>Операционные системы. Интерактивный курс</h5>
-                        <a href="https://geekbrains.ru/certificates/795162" target="_blank">
-                        <img src="./img/cert5.jpg" alt="сертификат 5">
-                        </a>
-                        <h5>«Git. Базовый курс»</h5>
-                        <a href="https://geekbrains.ru/certificates/956893" target="_blank">
-                        <img src="./img/cert6.jpg" alt="сертификат 4">
-                        </a>
-                        <h5>Основы баз данных. Видеокурс</h5>
-                        <a href="https://geekbrains.ru/certificates/956437" target="_blank">
-                        <img src="./img/cert7.jpg" alt="сертификат 4">
-                        </a>
-                        <h5>HTML/CSS. Интерактивный курс</h5>
-                        <a href="https://geekbrains.ru/certificates/796436" target="_blank">
-                        <img src="./img/cert2.jpg" alt="сертификат 2">
-                        </a>
-                        <h5>Javascript. Начальный уровень</h5>
-                        <a href="https://geekbrains.ru/certificates/796472" target="_blank">
-                        <img src="./img/cert3.jpg" alt="сертификат 3">
-                        </a>
-                        <h5>Photoshop. Начальный уровень</h5>
-                        <a href="https://geekbrains.ru/certificates/798096" target="_blank">
-                        <img src="./img/cert4.jpg" alt="сертификат 4">
-                        </a>
-                        
-                    `;
-console.log(document.getElementsByClassName('portfolioInner'));
-console.log(document.getElementById('education'));
+const portfolio = [
+  ['Личный cайт студента GeekBrains',
+  'http://v90630om.beget.tech/index.php', 
+  'my_website1.jpg',
+  'сайт']
+];
+
+const certificate = [
+  ['Основы программирования. Интерактивный курс',
+  'https://geekbrains.ru/certificates/954339',
+  'cert1.jpg',
+  'сертификат'],
+  ['Операционные системы. Интерактивный курс',
+  'https://geekbrains.ru/certificates/795162',
+  'cert2.jpg',
+  'сертификат'],
+  ['«Git. Базовый курс»',
+  'https://geekbrains.ru/certificates/956893',
+  'cert3.jpg',
+  'сертификат'],
+  ['Основы баз данных. Видеокурс',
+  'https://geekbrains.ru/certificates/956437',
+  'cert4.jpg',
+  'сертификат'],
+  ['HTML/CSS. Интерактивный курс',
+  'https://geekbrains.ru/certificates/796436',
+  'cert5.jpg',
+  'сертификат'],
+  ['Javascript. Начальный уровень',
+  'https://geekbrains.ru/certificates/796472',
+  'cert6.jpg',
+  'сертификат'],
+  ['Photoshop. Начальный уровень',
+  'https://geekbrains.ru/certificates/798096',
+  'cert7.jpg',
+  'сертификат']
+];
 
 function getRezyume() {
   show(["education", "skills", "hobby", "experience"]);
@@ -49,7 +49,7 @@ function getPortfolio() {
   show("portfolioInner");
   write(
     ["portfolioInner"],
-    portfolio
+    compoundTextTag(portfolio)
   );
   checkStyleOn("trapezoid2");
   checkStyleOff("trapezoid1");
@@ -58,12 +58,15 @@ function getPortfolio() {
 
 function getCertificate() {
   hide(["education", "skills", "hobby", "experience"]);
-  write(
-    ["portfolioInner"],
-    certificate);
   checkStyleOn("trapezoid3");
   checkStyleOff("trapezoid2");
   checkStyleOff("trapezoid1");
+  write(
+    ["portfolioInner"],
+    compoundTextTag(certificate)
+  );
+ 
+
 }
 
 function checkStyleOff(className) {
@@ -118,4 +121,15 @@ function write(teg, text) {
   for (const iterator of teg) {
     document.getElementById(iterator).innerHTML = text;
   }
+}
+
+function compoundTextTag(text) {
+  let test = '';
+  for (const iterator of text) {
+    test += `<h5>${iterator[0]}</h5>
+              <a href="${iterator[1]}" target="_blank">
+                <img src="./img/${iterator[2]}" alt="${iterator[3]}">
+              </a>`;
+  }
+  return test;
 }
