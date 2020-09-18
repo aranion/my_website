@@ -8,13 +8,84 @@ body {
 .grid-container {
     display: grid;
     min-width: 900px;
-    background-color: chartreuse;
-    grid-template-areas: "left right";
-    grid-template-columns: 300px 600px;
-    grid-template-rows: 1450px;
-    -webkit-box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    grid-template-areas: "left right br";
+    grid-template-columns: 300px 600px 30px;
+    /* grid-template-rows: 1450px; */
+
+}
+
+.trapezoid {
+    border-left: 30px solid #D8D8D8;
+    /*высота трапеции и её фоновый цвет*/
+    border-top: 15px solid transparent;
+    /*наклон левой границы*/
+    border-bottom: 15px solid transparent;
+    /*наклон правой границы*/
+    height: 100px;
+    /*это значение высоты должно быть равным 0*/
+    width: 0px;
+    /*ширина трапеции*/
+}
+
+.trapezoid-group {
+    display: flex;
+    grid-area: br;
+    height: 390px;
+    margin-top: 50px;
+    flex-direction: column;
+    margin-right: -30px;
+    cursor: pointer;
+}
+
+.trapezoid1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.trapezoid2 {
+    border-left: 30px solid #646464;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trapezoid3 {
+    border-left: 30px solid #646464;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trapezoid p {
+    margin-left: -27px;
+    /* margin-top: 55px; */
+    display: flex;
+    justify-content: center;
+    color: #646464;
+    font-size: 0.9rem;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.trapezoid1 p{
+    font-weight: bold;
+}
+.trapezoid2 p {
+    color: #D8D8D8;
+
+    /* margin-top: 70px; */
+}
+
+.trapezoid3 p {
+    color: #D8D8D8;
+    /* margin-top: 80px; */
 }
 
 .right-content {
@@ -23,23 +94,34 @@ body {
     display: flex;
     padding-top: 30px;
     padding-bottom: 30px;
+    -webkit-box-shadow: 4px 4px 18px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:    4px 4px 18px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:         4px 4px 18px 2px rgba(0, 0, 0, 0.2);
+
+    /* box-shadow:8px 1px 22px 6px rgba(0,0,0,1);
+-webkit-box-shadow:8px 1px 22px 6px rgba(0,0,0,1);
+-moz-box-shadow:8px 1px 22px 6px rgba(0,0,0,1); */
 }
 
 .left-content {
     grid-area: left;
     background-color: #3A3A3A;
     padding-left: 30px;
+        -webkit-box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
 }
 
 .left-content .hr {
     width: 90%;
     height: 0.1rem;
-    background-color:#646464;
+    background-color: #646464;
     /* margin-top: 5px; */
     margin-bottom: 5px;
     margin-top: 3px;
     margin-left: 0px;
 }
+
 .left-content p.fio {
     font-size: 2rem;
     color: #fff;
@@ -83,10 +165,70 @@ body {
     font-size: 1.1rem;
 }
 
+.contacts a {
+    text-decoration: none;
+    color: #D8D8D8;
+}
+
+a:hover a {
+    text-decoration: underline;
+}
+
+.links img {
+    height: 50px;
+    text-align: justify;
+    background-color: #fff;
+    opacity: 0;
+}
+
+.links {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.links-group {
+    width: 90%;
+    /* padding-left: 10%; */
+    padding-right: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-hover {
+    opacity: 1;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+
+.links-group .hh {
+    background-image: url(../img/HeadHunter_logo_cb.png);
+}
+
+.links-group .SJ {
+    background-image: url(../img/SJ_cb.png);
+}
+
+.links-group .git {
+    background-size: 55px 50px;
+    background-image: url(../img/github_PNG19_cb.png);
+}
+
+.link-hover:hover img {
+    opacity: 1;
+    max-height: 50px;
+    transition: .35s;
+    /*Скорость перехода состояния элемента*/
+    transition-delay: 0.10s;
+}
+
 .contacts div {
     display: flex;
     padding-bottom: 5px;
 }
+/* .visibleDiv {
+    width: 95%;
+    margin-left: 0px;
+} */
 
 .experience {
     width: 95%;
@@ -125,15 +267,6 @@ body {
     margin-left: 40px;
 }
 
-.experience .year {
-    margin: 0px auto;
-    width: 15%;
-    color: #646464;
-    text-align: center;
-    margin-left: -17px;
-    padding-right: 17px;
-}
-
 .experience .line {
     border-left: 0.1rem solid #646464;
     width: 1%;
@@ -144,6 +277,7 @@ body {
     height: 100%;
     padding-left: 10px;
 }
+
 .experience .description p {
     margin: 0px;
     width: 96%;
@@ -152,31 +286,39 @@ body {
     color: #646464;
     text-align: justify;
 }
+
 .experience .description h3 {
     margin: 0px;
     padding-top: 19px;
     margin-bottom: 10px;
 }
+
 .experience .description a {
     text-decoration: none;
     font-style: italic;
     /* padding-left: 10px; */
     color: #000;
 }
+
 .circle {
-	width: 10px;
-	height: 10px;
-	background: rgb(0, 195, 255);
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+    width: 10px;
+    height: 10px;
+    background: rgb(0, 195, 255);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
     border-radius: 5px;
     margin-left: -6px;
     margin-top: 25px;
 }
 
+.circle1 {
+    margin-top: 310px;
+}
+
 .circle2 {
     margin-top: 5px;
 }
+
 .circle3 {
     margin-top: 80px;
 }
@@ -187,6 +329,76 @@ body {
 
 .circle5 {
     margin-top: 100px;
+}
+
+.experience .footer .grid-year {
+    margin: 0px auto;
+    text-align: center;
+    margin-left: -10px;
+    padding-right: 10px;
+    width: 15%;
+    color: #646464;
+}
+
+.experience .footer .year {
+    width: 100%;
+}
+
+.experience .footer .year1 {
+    width: 100%;
+    margin-top: 270px;
+}
+
+#portfolioInner img {
+    width: 80%;
+    -webkit-box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: 0 auto;
+}
+
+#portfolioInner p {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+
+.experience-sk1 {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    top: -130px;
+    /* padding:5px; */
+    /* display:none; */
+    /* width: 250x; */
+    height: 100px;
+    background: #fff;
+    opacity: 0;
+    /*Элемент полностью прозрачный (невидимый)*/
+    transition: 0s;
+    /*Скорость перехода состояния элемента*/
+}
+
+.experience-hvr:hover .experience-sk1 {
+    /* display:block; */
+    -webkit-box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 18px 2px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    /*Элемент полностью прозрачный (невидимый)*/
+    transition: 1s;
+    /*Скорость перехода состояния элемента*/
+    transition-delay: 0.15s;
+}
+
+.experience-hvr {
+    position: relative;
+}
+
+.experience-hvr:hover a {
+    text-decoration: underline;
 }
 
 .education {
@@ -229,8 +441,8 @@ body {
 
 .grid-year {
     margin: 0px auto;
-    text-align: center; 
-        margin-left: -10px;
+    text-align: center;
+    margin-left: -10px;
     padding-right: 10px;
     width: 19%;
 }
@@ -239,15 +451,19 @@ body {
     width: 100%;
     color: #646464;
 }
+
 .year1 {
     margin-top: 72px;
 }
+
 .year2 {
     margin-top: 102px;
 }
+
 .year3 {
     margin-top: 90px;
 }
+
 .education .line {
     border-left: 0.1rem solid #646464;
     width: 1%;
@@ -258,6 +474,7 @@ body {
     height: 100%;
     padding-left: 10px;
 }
+
 .education .description p {
     margin: 0px;
     width: 96%;
@@ -267,44 +484,26 @@ body {
     color: #646464;
     text-align: justify;
 }
+
 .education .description h3 {
     margin: 0px;
     margin-bottom: 5px;
 }
+
 .education .description span {
     text-decoration: none;
     font-style: italic;
     color: #000;
 }
+
 .education .description a {
     text-decoration: none;
     color: #000;
 }
 
-
-
-
-.education-sk1 {    
-    position:absolute;
-    left: -35px;
-    bottom:0;
-    right:0;
-    /* top: -5px; */
-    padding:5px;
-    display:none;
-    width: 2500px;
-    height: 1000px;
-    background: #3A3A3A;
-    font-size: 0.8rem;
-    color: #fff;
+.description a:hover {
+    text-decoration: underline;
 }
-
-.education-hvr:hover .education-sk1{
-    display:block;
-}
-
-
-
 
 .skills {
     width: 95%;
@@ -355,160 +554,193 @@ body {
     padding-top: 10px;
     margin-left: 20px;
 }
+
 .skills .right-skills-div {
     width: 40%;
     height: 100%;
     padding-left: 10px;
     padding-top: 10px;
 }
+
 .skills .right-skills-div .hr {
     margin-top: 5px;
     border-top: 0.1rem solid #646464;
     width: 100%;
 }
+
 .skills .left-skills-div .hr {
     margin-top: 5px;
     border-top: 0.1rem solid #646464;
     width: 94%;
 }
-.skills .right-skills-div .hr p{
-    width: 50%; 
+
+.skills .right-skills-div .hr p {
+    width: 50%;
     background-color: #D8D8D8;
     margin: 0 auto;
     text-align: center;
     margin-top: -10px;
     color: #646464;
- }
- .skills .left-skills-div .hr p{
-     width: 40%;
+}
+
+.skills .left-skills-div .hr p {
+    width: 40%;
     background-color: #D8D8D8;
     margin: 0 auto;
     text-align: center;
     margin-top: -10px;
     color: #646464;
- }
+}
 
- .skill {
-     width: 94%;
-     margin-top: 5px;
-     margin-bottom: 5px;
-     display: flex;
+.skill {
+    width: 94%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
 
- }
- .skill p{
+.skill p {
     width: 60%;
     margin: 0px;
     color: #646464;
     font-size: 0.8rem;
-    
 }
- .skill-max-value   {
-     height: 8px;
-     width: 40%;
-     margin: auto 0;
-     background-color: #646464;
- }
- .skill-value {
-    height: 8px;    
+
+.skill-max-value {
+    height: 8px;
+    width: 40%;
     margin: auto 0;
-    background-color:rgb(0, 195, 255);
-    position:relative;
- }
+    background-color: #646464;
+}
+
+.skill-value {
+    height: 8px;
+    margin: auto 0;
+    background-color: rgb(0, 195, 255);
+    position: relative;
+}
+
 .sk1 {
     width: 95%;
 }
+
 .sk2 {
     width: 91%;
 }
+
 .sk3 {
     width: 76%;
 }
+
 .sk4 {
     width: 67%;
 }
+
 .sk5 {
     width: 71%;
 }
+
 .sk6 {
     width: 45%;
 }
+
 .sk7 {
     width: 85%;
 }
+
 .sk8 {
     width: 60%;
 }
+
 .sk9 {
     width: 87%;
 }
+
 .sk10 {
     width: 40%;
 }
+
 .sk11 {
     width: 55%;
 }
 
-
 .right-skills-div .sk1 {
     width: 95%;
 }
+
 .right-skills-div .sk2 {
     width: 40%;
 }
+
 .right-skills-div .sk3 {
     width: 30%;
 }
+
 .right-skills-div .sk4 {
     width: 80%;
 }
+
 .right-skills-div .sk5 {
     width: 80%;
 }
+
 .right-skills-div .sk6 {
     width: 90%;
 }
+
 .right-skills-div .sk7 {
     width: 70%;
 }
+
 .right-skills-div .sk8 {
     width: 65%;
 }
+
 .right-skills-div .sk9 {
     width: 75%;
 }
 
-.hover-sk1 {    
-    position:absolute;
+.right-skills-div .sk10 {
+    width: 100%;
+}
+
+.hover-sk1 {
+    position: absolute;
     left: -35px;
-    bottom:0;
-    right:0;
+    bottom: 0;
+    right: 0;
     /* top: -5px; */
-    padding:5px;
-    display:none;
+    padding: 5px;
+    /* display:none; */
     width: 25px;
     height: 10px;
     background: #3A3A3A;
     font-size: 0.8rem;
     color: #fff;
+    opacity: 0;
+    /*Элемент полностью прозрачный (невидимый)*/
+    transition: 0s;
+    /*Скорость перехода состояния элемента*/
 }
+
 .triangle-down {
-	width: 0;
+    width: 0;
     height: 0;
     margin-top: -4.7px;
     margin-left: 30px;
-    border-bottom: 5px solid #3A3A3A; 
-	border-right: 5px solid transparent;
+    border-bottom: 5px solid #3A3A3A;
+    border-right: 5px solid transparent;
 }
 
-.skill-value:hover .hover-sk1{
-    display:block;
+.skill-value:hover .hover-sk1 {
+    /* display:block; */
+    opacity: 1;
+    /*Элемент полностью прозрачный (невидимый)*/
 }
 
 .right-skills-div .skill {
     width: 100%;
 }
-
-
 
 .hobby {
     width: 95%;
@@ -541,11 +773,13 @@ body {
     background-color: #646464;
     margin-left: 100px;
 }
+
 .hobby .footer {
     padding-top: 15px;
     width: 100%;
     margin-left: 50px;
 }
+
 .hobby .footer img {
     margin-right: 5px;
     width: 50px;

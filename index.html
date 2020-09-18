@@ -2,12 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport"/> -->
+    <meta content="width=device-width, initial-scale=1.0" name="robots" content="noindex, nofollow"/>
     <title>Гаврилей Е.С.</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="js/js.js"></script>
   </head>
   <body>
     <div class="grid-container">
+        
       <div class="left-content">
         <div class="photo-profile">
           <img src="./img/photo-rofile.jpg" alt="photo-profile" />
@@ -19,8 +22,10 @@
           <h3>О себе</h3>
           <div class="hr"></div>
           <p>
-            02.04.1991г.р. <br />
-            Семейное положение: женат, детей нет. <br />
+            Здавствуйте!<br />  
+            Мне 29 лет, женат, детей нет. <br />
+            Обладаю весьма полезными навыками для работы в сфере IT.
+            Увлекаюсь Web-разработкой. Всегда готов развиваться и получать дополнительные знания.
             Ответственно подхожу к реализации поставленных задач, поручения
             выполняю качественно и точно в срок. Быстро осваиваю необходимые для
             работы новые навыки. Эффективно планирую свое время. <br />
@@ -30,7 +35,7 @@
             ситуациях всегда нацелен на нахождение компромиссных решений. <br />
             Веду здоровый образ жизни. <br />
             Проходил службу в ВС РФ. <br />
-            Водительские права категории В, личный автомобиль.
+            Водительские права категории "В", личный автомобиль.
           </p>
           <h3>КОНТАКТЫ</h3>
           <div class="hr"></div>
@@ -41,11 +46,11 @@
             </div>
             <div>
               <img src="./img/phone.png" alt="место" />
-              <p>+7 906 300 19 64</p>
+              <p><a href="tel: +79063001964">+7 906 300 19 64</a></p>
             </div>
             <div>
               <img src="./img/email.png" alt="место" />
-              <p>Gavriley-es@mail.ru</p>
+              <p><a href="mailto: Gavriley-es@mail.ru">Gavriley-es@mail.ru</a></p>
             </div>
           </div>
           <div class="quality">
@@ -57,34 +62,53 @@
               Стрессоустойчивый; Обладаю аналитическими способностями.
             </p>
           </div>
+          <div class="links">
+            <h3>ПОЛЕЗНЫЕ ССЫЛКИ</h3>
+            <div class="hr"></div>
+            <div class="links-group">
+            <div class="link-hover hh" ><a href="https://saratov.hh.ru/resume/b8a927baff040ff71b0039ed1f7a5353663762" target="_blank"><img src="./img/HeadHunter_logo.png" alt="HH" /></a></div>
+            <div class="link-hover SJ" ><a href="https://www.superjob.ru/resume/web-programmist-9498340.html" target="_blank"><img src="./img/SJ.png" alt="SuperJob" /></a></div>
+            <div class="link-hover git" ><a href="https://github.com/aranion" target="_blank"><img src="./img/github_PNG19.png" alt="GitHab" /></a></div>
+        </div>
+          </div>
         </div>
       </div>
       <div class="right-content">
-        <div>
+        <div><div>
+            <div id="portfolioInner"></div>
+            
             <div class="experience">
+                <div class="visibleDiv">
             <div class="header">
                 <img src="./img/portfolio.png" alt="опыт работы" />
                 <h3>ОПЫТ РАБОТЫ</h3>
                 <div class="hr"></div>
             </div>
             <div class="footer">
+                <div class="grid-year">
                 <div class="year">
                 02.2015 <br />
                 — <br />
                 08.2020
                 </div>
+            
+                <div class="year1">
+                    2014 <br />
+                    — <br />
+                    2015
+                    </div>
+                </div>
                 <div class="line">
                 <div class="circle"></div>
+                <div class="circle circle1"></div>
                 </div>
                 <div class="description">
                 <h3>Инженер по АСУП</h3>
                 <a href="https://saratov-tr.gazprom.ru/" target="_blank">
-                    ООО «Газпром трансгаз Саратов»</a>
-                    <!-- НЕ РАБОТАЕТ ВСПЛЫВАЮЩЕЕЕ ОКНО -->
-                    <div class="education-sk1"><img src="./img/logogts.png" alt="газпром"></div>
-                <p><div class="education-hvr">
-                    Ответственный за информационную инфраструктуру филиала ООО
-                    «Газпром трансгаз Саратов» СОК «Родничок». <br /></div>
+                   <div class="experience-hvr"> ООО «Газпром трансгаз Саратов»</a>
+                    <img class="experience-sk1" src="./img/logogts.png" alt="газпром" class="experience-sk1"> </div>
+                <p> Ответственный за информационную инфраструктуру филиала ООО
+                    «Газпром трансгаз Саратов» СОК «Родничок». <br />
                     Проведение работ по отладке, опытной эксплуатации и поэтапному
                     введению в действие комплекса технических средств АСУП;
                     техническое сопровождение серверного оборудования, ПЭВМ и
@@ -94,7 +118,13 @@
                     сотрудников, подготовка технической документации; подключение и
                     настройка контрольно-кассовой техники.
                 </p>
-                </div>
+                <h3>Инженер по ОТ и ПБ</h3>
+                <a href="http://sargaz.gazprom-auto.ru/" target="_blank">
+                   <div class="experience-hvr"> ООО Завод «Саратовгазавтоматика»</a>
+                     <img  class="experience-sk1"src="./img/gazpromnews.jpg" alt="газпром" class="experience-sk1" ></div>
+                <p> Ведение документации, предусмотренными нормативными документами.
+                </p>
+                </div></div>
             </div>
             </div>
             <div class="education">
@@ -255,7 +285,11 @@
                         <div class="skill">
                             <p>СЗПД</p>
                             <div class="skill-max-value"><div class="skill-value sk9"><div class="hover-sk1">75% <div class="triangle-down"></div></div></div></div>
-                        </div>               
+                        </div>
+                        <div class="skill">
+                            <p>Самообучение</p>
+                            <div class="skill-max-value"><div class="skill-value sk10"><div class="hover-sk1">100% <div class="triangle-down"></div></div></div></div>
+                        </div>                 
                     </div>
                 </div>
             </div> 
@@ -274,6 +308,11 @@
                 </div>
             </div>   
         </div>
+    </div> </div>
+    <div class="trapezoid-group">
+        <div class="trapezoid trapezoid1"><p onclick="getRezyume();" id="rezyume">Резюме</p></div>
+        <div class="trapezoid trapezoid2"><p onclick="getPortfolio();" id="portfolio">Портфолио</p></div>
+        <div class="trapezoid trapezoid3"><p onclick="getCertificate();" id="certificate">Сертификаты</p></div>
     </div>
   </body>
 </html>
