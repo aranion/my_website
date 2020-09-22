@@ -58,6 +58,7 @@ function getPortfolio() {
 
 function getCertificate() {
   hide(["education", "skills", "hobby", "experience"]);
+  show("portfolioInner");
   checkStyleOn("trapezoid3");
   checkStyleOff("trapezoid2");
   checkStyleOff("trapezoid1");
