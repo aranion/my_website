@@ -29,7 +29,13 @@ const certificate = {
           "cert1.JPG",
           "сертификат",
         ],
-[
+	[
+          "PHP. Начальный уровень",
+          "https://geekbrains.ru/certificates/1033114",
+          "cert19.JPG",
+          "сертификат",
+        ],
+	[
           "JavaScript. Средний уровень",
           "https://geekbrains.ru/certificates/1033086",
           "cert18.JPG",
