@@ -59,9 +59,15 @@ const certificate = {
           "сертификат",
         ],
         [
-          "HTML&CSS. Начальный уровень",
-          "https://geekbrains.ru/certificates/796436",
-          "cert5.JPG",
+          "HTML5/CSS3",
+          "https://geekbrains.ru/certificates/1024778",
+          "cert10.JPG",
+          "сертификат",
+        ],
+        [
+          "HTML&CSS. Сложный уровень",
+          "https://geekbrains.ru/certificates/1033013",
+          "cert17.JPG",
           "сертификат",
         ],
         [
@@ -71,9 +77,9 @@ const certificate = {
           "сертификат",
         ],
         [
-          "HTML5/CSS3",
-          "https://geekbrains.ru/certificates/1024778",
-          "cert10.JPG",
+          "HTML&CSS. Начальный уровень",
+          "https://geekbrains.ru/certificates/796436",
+          "cert5.JPG",
           "сертификат",
         ],
       ],
