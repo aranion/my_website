@@ -42,12 +42,6 @@ const certificate = {
           "сертификат",
         ],
         [
-          "Javascript. Начальный уровень",
-          "https://geekbrains.ru/certificates/796472",
-          "cert6.JPG",
-          "сертификат",
-        ],
-        [
           "ES6 JS:синтаксис и обзор функций",
           "https://geekbrains.ru/certificates/977751",
           "cert14.JPG",
@@ -81,19 +75,7 @@ const certificate = {
           "https://geekbrains.ru/certificates/1033013",
           "cert17.JPG",
           "сертификат",
-        ],
-        [
-          "HTML&CSS. Средний уровень",
-          "https://geekbrains.ru/certificates/1030674",
-          "cert8.JPG",
-          "сертификат",
-        ],
-        [
-          "HTML&CSS. Начальный уровень",
-          "https://geekbrains.ru/certificates/796436",
-          "cert5.JPG",
-          "сертификат",
-        ],
+        ]
       ],
     },
     {
@@ -164,29 +146,29 @@ const certificate = {
 const skillsTechnical = [
   ['Технические'],
   ['Microsoft Office',95],
-  ['Windows 7/8.1/10',91],
-  ['Windows Server 2012R2',76],
-  ['Hyper-V, GPO',67],
-  ['AD, DHCP, DNS, WINS',71],
-  ['C++, C#, Java',45],
-  ['HTML, CSS, XML',85],
+  ['Windows 7/8.1/10',90],
+  ['Windows Server 2012R2',75],
+  ['Hyper-V, GPO',65],
+  ['AD, DHCP, DNS, WINS',70],
+  ['C++, C#, Java',40],
+  ['HTML, CSS, XML',90],
   ['JS, React, Redux',85],
-  ['Kaspersky (KSC/KES)',87],
+  ['Kaspersky (KSC/KES)',90],
   ['1C Предприятие 8.3',40],
   ['Unix/Linux/MacOS',55],  
 ];
 
 const skillsLanguage = [
   ['Языки'],
-  ['Русский',95],
+  ['Русский',100],
   ['Английский',40],
   ['Немецкий',30],
 ];  
 const skillsOther = [
   ['Общие'],
   ['Графика',80],
-  ['Ремонт ПЭВМ',80],
-  ['Диагностика',90],
+  ['Ремонт ПЭВМ',85],
+  ['Диагностика',95],
   ['Работа с ККТ',70],
   ['SAP',65],
   ['СЗПД',75],
