@@ -14,8 +14,27 @@ const portfolio = {
       "my_website2.jpg",
       "сайт2",
     ],
+    [
+      "Шаблон для работы с планшетом",
+      "https://aranion.github.io/slider_onpoint/index.html",
+      "my_website3.jpg",
+      "сайт3",
+    ],
+    [
+      "Лендинг по шаблону",
+      "https://aranion.github.io/landing_page_for_mgutm/",
+      "my_website4.jpg",
+      "сайт4",
+    ],
+    [
+      "Учебный сайт",
+      "https://aranion.github.io/gb_project_2/",
+      "my_website5.jpg",
+      "сайт5",
+    ],
   ],
 };
+
 const certificate = {
   name: "Сертификаты",
   img: "./img/sert2.png",
@@ -29,13 +48,13 @@ const certificate = {
           "cert1.JPG",
           "сертификат",
         ],
-	[
+        [
           "PHP. Начальный уровень",
           "https://geekbrains.ru/certificates/1033114",
           "cert19.JPG",
           "сертификат",
         ],
-	[
+        [
           "JavaScript. Средний уровень",
           "https://geekbrains.ru/certificates/1033086",
           "cert18.JPG",
@@ -51,6 +70,24 @@ const certificate = {
           "React/Redux. Библиотека ARUI-Feather",
           "https://geekbrains.ru/certificates/977575",
           "cert15.JPG",
+          "сертификат",
+        ],
+        [
+          "ReactJS. Базовый курс",
+          "https://gb.ru/certificates/1372748",
+          "cert20.JPG",
+          "сертификат",
+        ],
+        [
+          "Vue.js",
+          "https://gb.ru/certificates/1333337",
+          "cert21.JPG",
+          "сертификат",
+        ],
+        [
+          "Инструменты сборки Web-проектов",
+          "https://gb.ru/certificates/1228455",
+          "cert22.JPG",
           "сертификат",
         ],
       ],
@@ -75,7 +112,13 @@ const certificate = {
           "https://geekbrains.ru/certificates/1033013",
           "cert17.JPG",
           "сертификат",
-        ]
+        ],
+        [
+          "Профессиональная верстка",
+          "https://gb.ru/certificates/1081718",
+          "cert23.JPG",
+          "сертификат",
+        ],
       ],
     },
     {
@@ -144,36 +187,37 @@ const certificate = {
   ],
 };
 const skillsTechnical = [
-  ['Технические'],
-  ['Microsoft Office',95],
-  ['Windows 7/8.1/10',90],
-  ['Windows Server 2012R2',75],
-  ['Hyper-V, GPO',65],
-  ['AD, DHCP, DNS, WINS',70],
-  ['C++, C#, Java',40],
-  ['HTML, CSS, XML',90],
-  ['JS, React, Redux',85],
-  ['Kaspersky (KSC/KES)',90],
-  ['1C Предприятие 8.3',40],
-  ['Unix/Linux/MacOS',55],  
+  ["Технические"],
+  ["JS,TypeScript", 80],
+  ["React + Redux", 70],
+  ["HTML5, CSS3", 90],
+  ["Sass/Scss, Less", 80],
+  ["Vue.js", 60],
+  ["Node.js", 65],
+  ["Webpack, Babel, Gulp", 50],
+  ["Git", 85],
+  ["jQuery, bootstrap", 50],
+  ["C++, C#, Java, PHP", 30],
+  ["Unix/Linux/MacOS", 55],
+  ["SQL", 50],
 ];
 
 const skillsLanguage = [
-  ['Языки'],
-  ['Русский',100],
-  ['Английский',40],
-  ['Немецкий',30],
-];  
+  ["Языки"],
+  ["Русский", 100],
+  ["Английский", 40],
+  ["Немецкий", 30],
+];
 const skillsOther = [
-  ['Общие'],
-  ['Графика',80],
-  ['Ремонт ПЭВМ',85],
-  ['Диагностика',95],
-  ['Работа с ККТ',70],
-  ['SAP',65],
-  ['СЗПД',75],
-  ['Самообучение',100],
-]              
+  ["Общие"],
+  ["Графика", 80],
+  ["IDE", 85],
+  ["Пабота с npm, npx", 90],
+  ["Отладка кода", 70],
+  ["ООП", 50],
+  ["СЗПД", 75],
+  ["Самообучение", 100],
+];
 
 function checkBookmark(id) {
   switch (id) {
@@ -289,15 +333,15 @@ function compoundTextTag(elements) {
 }
 
 function compoundTagSkills(skills) {
-  return skills.map( (el,i) => {
-    if ( i === 0) {
-      return `
+  return skills
+    .map((el, i) => {
+      if (i === 0) {
+        return `
     <div class="hr">
       <p>${el[0]}</p>
     </div>`;
-    } else {
-      
-      return `
+      } else {
+        return `
         <div class="skill">
           <p>${el[0]}</p>
           <div class="skill-max-value">
@@ -308,8 +352,9 @@ function compoundTagSkills(skills) {
             </div>
           </div>
         </div>`;
-    }
-  }).join('');
+      }
+    })
+    .join("");
 }
 
 function init() {
@@ -317,9 +362,9 @@ function init() {
   const portfolioElem = document.querySelector("#portfolio");
   const certificateElem = document.querySelector("#certificate");
 
-  write(['skill_technical'],compoundTagSkills(skillsTechnical));
-  write(['skills_language'],compoundTagSkills(skillsLanguage));
-  write(['skills_other'],compoundTagSkills(skillsOther));
+  write(["skill_technical"], compoundTagSkills(skillsTechnical));
+  write(["skills_language"], compoundTagSkills(skillsLanguage));
+  write(["skills_other"], compoundTagSkills(skillsOther));
 
   rezyumeElem.addEventListener("click", (event) => {
     checkBookmark(event.currentTarget.id);

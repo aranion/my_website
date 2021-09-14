@@ -461,6 +461,7 @@ a:hover a {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   max-width: 300px;
+  min-height: 220px;
 }
 
 .dynamic_content .content img {
